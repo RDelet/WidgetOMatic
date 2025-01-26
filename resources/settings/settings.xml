@@ -1,0 +1,235 @@
+<settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+
+    <setting propertyKey="@Properties.DrawLines" title="@Strings.DrawLinesTitle">
+        <settingConfig type="boolean" />
+    </setting>
+
+    <setting propertyKey="@Properties.DrawAnalogClock" title="@Strings.DrawAnalogClockTitle">
+        <settingConfig type="boolean" />
+    </setting>
+
+    <setting propertyKey="@Properties.DateColor" title="@Strings.DateColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorWhite</listEntry>
+            <listEntry value="1">@Strings.ColorRed</listEntry>
+            <listEntry value="2">@Strings.ColorDarkRed</listEntry>
+            <listEntry value="3">@Strings.ColorOrange</listEntry>
+            <listEntry value="4">@Strings.ColorYellow</listEntry>
+            <listEntry value="5">@Strings.ColorLightBlue</listEntry>
+            <listEntry value="6">@Strings.ColorBlue</listEntry>
+            <listEntry value="7">@Strings.ColorDarkBlue</listEntry>
+            <listEntry value="8">@Strings.ColorGreen</listEntry>
+            <listEntry value="9">@Strings.ColorDarkGreen</listEntry>
+            <listEntry value="10">@Strings.ColorPurple</listEntry>
+            <listEntry value="12">@Strings.ColorPink</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.AnalogHourColor" title="@Strings.AnalogHourColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorWhite</listEntry>
+            <listEntry value="1">@Strings.ColorRed</listEntry>
+            <listEntry value="2">@Strings.ColorDarkRed</listEntry>
+            <listEntry value="3">@Strings.ColorOrange</listEntry>
+            <listEntry value="4">@Strings.ColorYellow</listEntry>
+            <listEntry value="5">@Strings.ColorLightBlue</listEntry>
+            <listEntry value="6">@Strings.ColorBlue</listEntry>
+            <listEntry value="7">@Strings.ColorDarkBlue</listEntry>
+            <listEntry value="8">@Strings.ColorGreen</listEntry>
+            <listEntry value="9">@Strings.ColorDarkGreen</listEntry>
+            <listEntry value="10">@Strings.ColorPurple</listEntry>
+            <listEntry value="12">@Strings.ColorPink</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.AnalogMinColor" title="@Strings.AnalogMinColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorWhite</listEntry>
+            <listEntry value="1">@Strings.ColorRed</listEntry>
+            <listEntry value="2">@Strings.ColorDarkRed</listEntry>
+            <listEntry value="3">@Strings.ColorOrange</listEntry>
+            <listEntry value="4">@Strings.ColorYellow</listEntry>
+            <listEntry value="5">@Strings.ColorLightBlue</listEntry>
+            <listEntry value="6">@Strings.ColorBlue</listEntry>
+            <listEntry value="7">@Strings.ColorDarkBlue</listEntry>
+            <listEntry value="8">@Strings.ColorGreen</listEntry>
+            <listEntry value="9">@Strings.ColorDarkGreen</listEntry>
+            <listEntry value="10">@Strings.ColorPurple</listEntry>
+            <listEntry value="12">@Strings.ColorPink</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.HourColor" title="@Strings.HourColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorWhite</listEntry>
+            <listEntry value="1">@Strings.ColorRed</listEntry>
+            <listEntry value="2">@Strings.ColorDarkRed</listEntry>
+            <listEntry value="3">@Strings.ColorOrange</listEntry>
+            <listEntry value="4">@Strings.ColorYellow</listEntry>
+            <listEntry value="5">@Strings.ColorLightBlue</listEntry>
+            <listEntry value="6">@Strings.ColorBlue</listEntry>
+            <listEntry value="7">@Strings.ColorDarkBlue</listEntry>
+            <listEntry value="8">@Strings.ColorGreen</listEntry>
+            <listEntry value="9">@Strings.ColorDarkGreen</listEntry>
+            <listEntry value="10">@Strings.ColorPurple</listEntry>
+            <listEntry value="12">@Strings.ColorPink</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.MinColor" title="@Strings.MinColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorWhite</listEntry>
+            <listEntry value="1">@Strings.ColorRed</listEntry>
+            <listEntry value="2">@Strings.ColorDarkRed</listEntry>
+            <listEntry value="3">@Strings.ColorOrange</listEntry>
+            <listEntry value="4">@Strings.ColorYellow</listEntry>
+            <listEntry value="5">@Strings.ColorLightBlue</listEntry>
+            <listEntry value="6">@Strings.ColorBlue</listEntry>
+            <listEntry value="7">@Strings.ColorDarkBlue</listEntry>
+            <listEntry value="8">@Strings.ColorGreen</listEntry>
+            <listEntry value="9">@Strings.ColorDarkGreen</listEntry>
+            <listEntry value="10">@Strings.ColorPurple</listEntry>
+            <listEntry value="12">@Strings.ColorPink</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.SecColor" title="@Strings.SecColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorWhite</listEntry>
+            <listEntry value="1">@Strings.ColorRed</listEntry>
+            <listEntry value="2">@Strings.ColorDarkRed</listEntry>
+            <listEntry value="3">@Strings.ColorOrange</listEntry>
+            <listEntry value="4">@Strings.ColorYellow</listEntry>
+            <listEntry value="5">@Strings.ColorLightBlue</listEntry>
+            <listEntry value="6">@Strings.ColorBlue</listEntry>
+            <listEntry value="7">@Strings.ColorDarkBlue</listEntry>
+            <listEntry value="8">@Strings.ColorGreen</listEntry>
+            <listEntry value="9">@Strings.ColorDarkGreen</listEntry>
+            <listEntry value="10">@Strings.ColorPurple</listEntry>
+            <listEntry value="12">@Strings.ColorPink</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.WidgetsRadius" title="@Strings.WidgetsRadiusTitle">
+        <settingConfig type="list">
+            <listEntry value="55">55</listEntry>
+            <listEntry value="65">65</listEntry>
+            <listEntry value="75">75</listEntry>
+            <listEntry value="85">85</listEntry>
+            <listEntry value="95">95</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.Widget_1" title="@Strings.Widget_1_Title">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.NoWidget</listEntry>
+            <listEntry value="1">@Strings.WidgetDistance</listEntry>
+            <listEntry value="2">@Strings.WidgetClimbed</listEntry>
+            <listEntry value="3">@Strings.WidgetHeartRate</listEntry>
+            <listEntry value="4">@Strings.WidgetCalories</listEntry>
+            <listEntry value="5">@Strings.WidgetSteps</listEntry>
+            <listEntry value="6">@Strings.WidgetRespirationRate</listEntry>
+            <listEntry value="7">@Strings.WidgetStressScore</listEntry>
+            <listEntry value="8">@Strings.WidgetBaterry</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.Widget_2" title="@Strings.Widget_2_Title">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.NoWidget</listEntry>
+            <listEntry value="1">@Strings.WidgetDistance</listEntry>
+            <listEntry value="2">@Strings.WidgetClimbed</listEntry>
+            <listEntry value="3">@Strings.WidgetHeartRate</listEntry>
+            <listEntry value="4">@Strings.WidgetCalories</listEntry>
+            <listEntry value="5">@Strings.WidgetSteps</listEntry>
+            <listEntry value="6">@Strings.WidgetRespirationRate</listEntry>
+            <listEntry value="7">@Strings.WidgetStressScore</listEntry>
+            <listEntry value="8">@Strings.WidgetBaterry</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.Widget_3" title="@Strings.Widget_3_Title">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.NoWidget</listEntry>
+            <listEntry value="1">@Strings.WidgetDistance</listEntry>
+            <listEntry value="2">@Strings.WidgetClimbed</listEntry>
+            <listEntry value="3">@Strings.WidgetHeartRate</listEntry>
+            <listEntry value="4">@Strings.WidgetCalories</listEntry>
+            <listEntry value="5">@Strings.WidgetSteps</listEntry>
+            <listEntry value="6">@Strings.WidgetRespirationRate</listEntry>
+            <listEntry value="7">@Strings.WidgetStressScore</listEntry>
+            <listEntry value="8">@Strings.WidgetBaterry</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.Widget_4" title="@Strings.Widget_4_Title">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.NoWidget</listEntry>
+            <listEntry value="1">@Strings.WidgetDistance</listEntry>
+            <listEntry value="2">@Strings.WidgetClimbed</listEntry>
+            <listEntry value="3">@Strings.WidgetHeartRate</listEntry>
+            <listEntry value="4">@Strings.WidgetCalories</listEntry>
+            <listEntry value="5">@Strings.WidgetSteps</listEntry>
+            <listEntry value="6">@Strings.WidgetRespirationRate</listEntry>
+            <listEntry value="7">@Strings.WidgetStressScore</listEntry>
+            <listEntry value="8">@Strings.WidgetBaterry</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.Widget_5" title="@Strings.Widget_5_Title">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.NoWidget</listEntry>
+            <listEntry value="1">@Strings.WidgetDistance</listEntry>
+            <listEntry value="2">@Strings.WidgetClimbed</listEntry>
+            <listEntry value="3">@Strings.WidgetHeartRate</listEntry>
+            <listEntry value="4">@Strings.WidgetCalories</listEntry>
+            <listEntry value="5">@Strings.WidgetSteps</listEntry>
+            <listEntry value="6">@Strings.WidgetRespirationRate</listEntry>
+            <listEntry value="7">@Strings.WidgetStressScore</listEntry>
+            <listEntry value="8">@Strings.WidgetBaterry</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.Widget_6" title="@Strings.Widget_6_Title">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.NoWidget</listEntry>
+            <listEntry value="1">@Strings.WidgetDistance</listEntry>
+            <listEntry value="2">@Strings.WidgetClimbed</listEntry>
+            <listEntry value="3">@Strings.WidgetHeartRate</listEntry>
+            <listEntry value="4">@Strings.WidgetCalories</listEntry>
+            <listEntry value="5">@Strings.WidgetSteps</listEntry>
+            <listEntry value="6">@Strings.WidgetRespirationRate</listEntry>
+            <listEntry value="7">@Strings.WidgetStressScore</listEntry>
+            <listEntry value="8">@Strings.WidgetBaterry</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.Widget_7" title="@Strings.Widget_7_Title">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.NoWidget</listEntry>
+            <listEntry value="1">@Strings.WidgetDistance</listEntry>
+            <listEntry value="2">@Strings.WidgetClimbed</listEntry>
+            <listEntry value="3">@Strings.WidgetHeartRate</listEntry>
+            <listEntry value="4">@Strings.WidgetCalories</listEntry>
+            <listEntry value="5">@Strings.WidgetSteps</listEntry>
+            <listEntry value="6">@Strings.WidgetRespirationRate</listEntry>
+            <listEntry value="7">@Strings.WidgetStressScore</listEntry>
+            <listEntry value="8">@Strings.WidgetBaterry</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.Widget_8" title="@Strings.Widget_8_Title">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.NoWidget</listEntry>
+            <listEntry value="1">@Strings.WidgetDistance</listEntry>
+            <listEntry value="2">@Strings.WidgetClimbed</listEntry>
+            <listEntry value="3">@Strings.WidgetHeartRate</listEntry>
+            <listEntry value="4">@Strings.WidgetCalories</listEntry>
+            <listEntry value="5">@Strings.WidgetSteps</listEntry>
+            <listEntry value="6">@Strings.WidgetRespirationRate</listEntry>
+            <listEntry value="7">@Strings.WidgetStressScore</listEntry>
+            <listEntry value="8">@Strings.WidgetBaterry</listEntry>
+        </settingConfig>
+    </setting>
+
+</settings>

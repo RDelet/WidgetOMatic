@@ -1,0 +1,54 @@
+<strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+
+    <string id="AppName">CalendarClock</string>
+
+    <string id="DrawAnalogClockTitle">Draw Analog Clock</string>
+    <string id="DrawLinesTitle">Draw Lines</string>
+
+    <string id="DateColorTitle">Date Color</string>
+    <string id="HourColorTitle">Hour Color</string>
+    <string id="AnalogHourColorTitle">Analog Hour Color</string>
+    <string id="MinColorTitle">Min Color</string>
+    <string id="AnalogMinColorTitle">Analog Min Color</string>
+    <string id="SecColorTitle">Sec Color</string>
+
+    <string id="WidgetsRadiusTitle">Widget Radius</string>
+    <string id="Widget_1_Title">Widget 1</string>
+    <string id="Widget_2_Title">Widget 2</string>
+    <string id="Widget_3_Title">Widget 3</string>
+    <string id="Widget_4_Title">Widget 4</string>
+    <string id="Widget_5_Title">Widget 5</string>
+    <string id="Widget_6_Title">Widget 6</string>
+    <string id="Widget_7_Title">Widget 7</string>
+    <string id="Widget_8_Title">Widget 8</string>
+    
+    <string id="ColorWhite">White</string>
+    <string id="ColorLightGray">Light Gray</string>
+    <string id="ColorDarkGray">Dark Gray</string>
+    <string id="ColorBlack">Black</string>
+    <string id="ColorRed">Red</string>
+    <string id="ColorDarkRed">Dark Red</string>
+    <string id="ColorOrange">Orange</string>
+    <string id="ColorYellow">Yellow</string>
+    <string id="ColorLightBlue">Light Blue</string>
+    <string id="ColorBlue">Blue</string>
+    <string id="ColorDarkBlue">Dark Blue</string>
+    <string id="ColorGreen">Green</string>
+    <string id="ColorDarkGreen">Dark Green</string>
+    <string id="ColorPurple">Purple</string>
+    <string id="ColorPink">Pink</string>
+
+    <string id="NoWidget">No Widget</string>
+    <string id="WidgetDistance">Distance</string>
+    <string id="WidgetClimbed">Climbed</string>
+    <string id="WidgetHeartRate">HeartRate</string>
+    <string id="WidgetCalories">Calories</string>
+    <string id="WidgetSteps">Steps</string>
+    <string id="WidgetRespirationRate">RespirationRate</string>
+    <string id="WidgetStressScore">StressScore</string>
+    <string id="WidgetBaterry">Battery</string>
+
+    <string id="Show">Show</string>
+    <string id="Hide">Hide</string>
+
+</strings>

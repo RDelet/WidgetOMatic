@@ -1,0 +1,24 @@
+<properties xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+
+    <property id="DrawLines" type="boolean">true</property>
+    <property id="DrawAnalogClock" type="boolean">false</property>
+
+    <property id="DateColor" type="number">6</property>
+    <property id="HourColor" type="number">5</property>
+    <property id="AnalogHourColor" type="number">0</property>
+    <property id="MinColor" type="number">8</property>
+    <property id="AnalogMinColor" type="number">3</property>
+    <property id="SecColor" type="number">3</property>
+
+    <property id="WidgetsRadius" type="number">85</property>
+    <property id="Widget_1" type="number">3</property>
+    <property id="Widget_2" type="number">7</property>
+    <property id="Widget_3" type="number">2</property>
+    <property id="Widget_4" type="number">1</property>
+    <property id="Widget_5" type="number">8</property>
+    <property id="Widget_6" type="number">5</property>
+    <property id="Widget_7" type="number">4</property>
+    <property id="Widget_8" type="number">0</property>
+
+</properties>
+
