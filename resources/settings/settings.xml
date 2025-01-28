@@ -21,7 +21,9 @@
             <listEntry value="8">@Strings.ColorGreen</listEntry>
             <listEntry value="9">@Strings.ColorDarkGreen</listEntry>
             <listEntry value="10">@Strings.ColorPurple</listEntry>
-            <listEntry value="12">@Strings.ColorPink</listEntry>
+            <listEntry value="11">@Strings.ColorPink</listEntry>
+            <listEntry value="12">@Strings.ColorDarkGray</listEntry>
+            <listEntry value="13">@Strings.ColorLightGray</listEntry>
         </settingConfig>
     </setting>
 
@@ -38,7 +40,9 @@
             <listEntry value="8">@Strings.ColorGreen</listEntry>
             <listEntry value="9">@Strings.ColorDarkGreen</listEntry>
             <listEntry value="10">@Strings.ColorPurple</listEntry>
-            <listEntry value="12">@Strings.ColorPink</listEntry>
+            <listEntry value="11">@Strings.ColorPink</listEntry>
+            <listEntry value="12">@Strings.ColorDarkGray</listEntry>
+            <listEntry value="13">@Strings.ColorLightGray</listEntry>
         </settingConfig>
     </setting>
 
@@ -55,7 +59,9 @@
             <listEntry value="8">@Strings.ColorGreen</listEntry>
             <listEntry value="9">@Strings.ColorDarkGreen</listEntry>
             <listEntry value="10">@Strings.ColorPurple</listEntry>
-            <listEntry value="12">@Strings.ColorPink</listEntry>
+            <listEntry value="11">@Strings.ColorPink</listEntry>
+            <listEntry value="12">@Strings.ColorDarkGray</listEntry>
+            <listEntry value="13">@Strings.ColorLightGray</listEntry>
         </settingConfig>
     </setting>
 
@@ -72,7 +78,9 @@
             <listEntry value="8">@Strings.ColorGreen</listEntry>
             <listEntry value="9">@Strings.ColorDarkGreen</listEntry>
             <listEntry value="10">@Strings.ColorPurple</listEntry>
-            <listEntry value="12">@Strings.ColorPink</listEntry>
+            <listEntry value="11">@Strings.ColorPink</listEntry>
+            <listEntry value="12">@Strings.ColorDarkGray</listEntry>
+            <listEntry value="13">@Strings.ColorLightGray</listEntry>
         </settingConfig>
     </setting>
 
@@ -89,7 +97,9 @@
             <listEntry value="8">@Strings.ColorGreen</listEntry>
             <listEntry value="9">@Strings.ColorDarkGreen</listEntry>
             <listEntry value="10">@Strings.ColorPurple</listEntry>
-            <listEntry value="12">@Strings.ColorPink</listEntry>
+            <listEntry value="11">@Strings.ColorPink</listEntry>
+            <listEntry value="12">@Strings.ColorDarkGray</listEntry>
+            <listEntry value="13">@Strings.ColorLightGray</listEntry>
         </settingConfig>
     </setting>
 
@@ -106,7 +116,9 @@
             <listEntry value="8">@Strings.ColorGreen</listEntry>
             <listEntry value="9">@Strings.ColorDarkGreen</listEntry>
             <listEntry value="10">@Strings.ColorPurple</listEntry>
-            <listEntry value="12">@Strings.ColorPink</listEntry>
+            <listEntry value="11">@Strings.ColorPink</listEntry>
+            <listEntry value="12">@Strings.ColorDarkGray</listEntry>
+            <listEntry value="13">@Strings.ColorLightGray</listEntry>
         </settingConfig>
     </setting>
 

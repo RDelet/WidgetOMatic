@@ -43,6 +43,7 @@ class ClockWidget {
         dc.setPenWidth(1);
         dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawCircle(centerX, centerY, maxRadius);
+        dc.drawCircle(centerX, centerY, minRadius + (radiusOffset * 0.5));
         dc.drawCircle(centerX, centerY, minRadius);
     }
 
@@ -51,7 +52,7 @@ class ClockWidget {
         var startAngle = Math.toDegrees(Math.PI / 2.0);
         var direction = Graphics.ARC_CLOCKWISE;
 
-        dc.setPenWidth(penWidth);
+        dc.setPenWidth(penWidth / 2);
         for (var i = 0; i < 60; i++) {
             if (today.min % 2 == 1) {
                 if (i < today.sec) {
@@ -67,20 +68,20 @@ class ClockWidget {
                 }
             }
             var endAngle = startAngle - (angleStep - 3);
-            dc.drawArc(centerX, centerY, minRadius + (radiusOffset / 2), direction, startAngle, endAngle);
+            dc.drawArc(centerX, centerY, minRadius + (radiusOffset * 0.75), direction, startAngle, endAngle);
             startAngle -= angleStep;
         }
     }
 
     private function drawMinutes(dc as Dc) {
         var angleStep = 360.0 / 60.0;
-        var startAngle = Math.toDegrees(Math.PI / 2.0) + -angleStep * today.min;
+        var startAngle = Math.toDegrees(Math.PI / 2.0) - angleStep * today.min;
         var direction = Graphics.ARC_CLOCKWISE;
         var endAngle = startAngle - (angleStep - 3);
 
-        dc.setPenWidth(penWidth);
+        dc.setPenWidth(penWidth / 2);
         dc.setColor(minutesColor, Graphics.COLOR_TRANSPARENT);
-        dc.drawArc(centerX, centerY, minRadius + (radiusOffset / 2), direction, startAngle, endAngle);
+        dc.drawArc(centerX, centerY, minRadius + (radiusOffset * 0.25), direction, startAngle + 1, endAngle - 1);
     }
 
     private function drawHours(dc as Dc) {
@@ -89,9 +90,9 @@ class ClockWidget {
         var direction = Graphics.ARC_CLOCKWISE;
         var endAngle = startAngle - angleStep;
 
-        dc.setPenWidth(4);
+        dc.setPenWidth(penWidth);
         dc.setColor(hoursColor, Graphics.COLOR_TRANSPARENT);
-        dc.drawArc(centerX, centerY, minRadius + (radiusOffset / 2), direction, startAngle, endAngle);
+        dc.drawArc(centerX, centerY, minRadius + (radiusOffset * 0.5), direction, startAngle, endAngle);
     }
 
     private function drawAnalog(dc as Dc) as Void {

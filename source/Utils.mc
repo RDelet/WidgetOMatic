@@ -41,7 +41,9 @@ public var settingColor = {0 => Graphics.COLOR_WHITE,
                            8 => Graphics.COLOR_GREEN,
                            9 => Graphics.COLOR_DK_GREEN,
                            10 => Graphics.COLOR_PURPLE,
-                           11 => Graphics.COLOR_PINK};
+                           11 => Graphics.COLOR_PINK,
+                           12 => Graphics.COLOR_DK_GRAY,
+                           13 => Graphics.COLOR_LT_GRAY};
 
 public function getSetting(settingName as String) {
     return Application.Properties.getValue(settingName);
@@ -71,7 +73,7 @@ public function toKiloMeters(value as Number) as Float {
 }
 
 public var borderOffset = 2;
-public var radiusOffset = 10;
+public var radiusOffset = 12;
 public var angleOffset = Math.toRadians(-90);
 public var updateViewSettings = true;
 public var updateClockSettings = true;
