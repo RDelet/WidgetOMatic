@@ -1,11 +1,25 @@
 <settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
 
-    <setting propertyKey="@Properties.DrawLines" title="@Strings.DrawLinesTitle">
+    <setting propertyKey="@Properties.DrawAnalogClock" title="@Strings.DrawAnalogClockTitle">
         <settingConfig type="boolean" />
     </setting>
 
-    <setting propertyKey="@Properties.DrawAnalogClock" title="@Strings.DrawAnalogClockTitle">
-        <settingConfig type="boolean" />
+    <setting propertyKey="@Properties.DateSize" title="@Strings.DateSizeTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.FontXTiny</listEntry>
+            <listEntry value="1">@Strings.FontTiny</listEntry>
+            <listEntry value="2">@Strings.FontMedium</listEntry>
+            <listEntry value="3">@Strings.FontLarge</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.TimeSize" title="@Strings.TimeSizeTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.FontXTiny</listEntry>
+            <listEntry value="1">@Strings.FontTiny</listEntry>
+            <listEntry value="2">@Strings.FontMedium</listEntry>
+            <listEntry value="3">@Strings.FontLarge</listEntry>
+        </settingConfig>
     </setting>
 
     <setting propertyKey="@Properties.DateColor" title="@Strings.DateColorTitle">

@@ -3,7 +3,6 @@
     <string id="AppName">CalendarClock</string>
 
     <string id="DrawAnalogClockTitle">Draw Analog Clock</string>
-    <string id="DrawLinesTitle">Draw Lines</string>
 
     <string id="DateColorTitle">Date Color</string>
     <string id="HourColorTitle">Hour Color</string>
@@ -11,6 +10,8 @@
     <string id="MinColorTitle">Min Color</string>
     <string id="AnalogMinColorTitle">Analog Min Color</string>
     <string id="SecColorTitle">Sec Color</string>
+    <string id="DateSizeTitle">Date Size</string>
+    <string id="TimeSizeTitle">Time Size</string>
 
     <string id="WidgetsRadiusTitle">Widget Radius</string>
     <string id="Widget_1_Title">Widget 1</string>
@@ -50,5 +51,10 @@
 
     <string id="Show">Show</string>
     <string id="Hide">Hide</string>
+
+    <string id="FontXTiny">XTiny</string>
+    <string id="FontTiny">Tiny</string>
+    <string id="FontMedium">Medium</string>
+    <string id="FontLarge">Large</string>
 
 </strings>

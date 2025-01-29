@@ -80,3 +80,5 @@ public var updateClockSettings = true;
 public var updateDateSettings = true;
 public var showLines = true;
 public var showAnalog = true;
+public var dateSize = 0;
+public var timeSize = 0;

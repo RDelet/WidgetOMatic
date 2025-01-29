@@ -72,7 +72,33 @@ class ClockWidget {
             startAngle -= angleStep;
         }
     }
+    private function drawMinutes(dc as Dc) {
+        var angleStep = 360.0 / 60.0;
+        var startAngle = Math.toDegrees(Math.PI / 2.0);
+        var direction = Graphics.ARC_CLOCKWISE;
 
+        dc.setPenWidth(penWidth / 2);
+        for (var i = 0; i < 60; i++) {
+            if (today.hour % 2 == 1) {
+                if (i < today.min) {
+                    dc.setColor(minutesColor, Graphics.COLOR_TRANSPARENT);
+                } else {
+                    dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+                }
+            } else {
+                if (i < today.min) {
+                    dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+                } else {
+                    dc.setColor(minutesColor, Graphics.COLOR_TRANSPARENT);
+                }
+            }
+            var endAngle = startAngle - (angleStep - 3);
+            dc.drawArc(centerX, centerY, minRadius + (radiusOffset * 0.25), direction, startAngle, endAngle);
+            startAngle -= angleStep;
+        }
+    }
+
+    /*
     private function drawMinutes(dc as Dc) {
         var angleStep = 360.0 / 60.0;
         var startAngle = Math.toDegrees(Math.PI / 2.0) - angleStep * today.min;
@@ -83,6 +109,7 @@ class ClockWidget {
         dc.setColor(minutesColor, Graphics.COLOR_TRANSPARENT);
         dc.drawArc(centerX, centerY, minRadius + (radiusOffset * 0.25), direction, startAngle + 1, endAngle - 1);
     }
+    */
 
     private function drawHours(dc as Dc) {
         var angleStep = 360.0 / 12.0;
@@ -90,9 +117,9 @@ class ClockWidget {
         var direction = Graphics.ARC_CLOCKWISE;
         var endAngle = startAngle - angleStep;
 
-        dc.setPenWidth(penWidth);
+        dc.setPenWidth(penWidth / 2);
         dc.setColor(hoursColor, Graphics.COLOR_TRANSPARENT);
-        dc.drawArc(centerX, centerY, minRadius + (radiusOffset * 0.5), direction, startAngle, endAngle);
+        dc.drawArc(centerX, centerY, minRadius + (radiusOffset * 0.75), direction, startAngle, endAngle);
     }
 
     private function drawAnalog(dc as Dc) as Void {
@@ -102,26 +129,25 @@ class ClockWidget {
             var colonTxt = ":";
             var minTxt = today.min.format("%02d");
             // Settings
-            var font = Graphics.FONT_XTINY;
             var justify = Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER;
-            var hourWidth = dc.getTextDimensions(hourTxt, font)[0];
-            var colonWidth = dc.getTextDimensions(colonTxt, font)[0];
-            var minWidth = dc.getTextDimensions(minTxt, font)[0];
-            var height = dc.getTextDimensions(hourTxt, font)[1];
+            var hourWidth = dc.getTextDimensions(hourTxt, timeSize)[0];
+            var colonWidth = dc.getTextDimensions(colonTxt, timeSize)[0];
+            var minWidth = dc.getTextDimensions(minTxt, timeSize)[0];
+            var height = dc.getTextDimensions(hourTxt, timeSize)[1];
             var totalWidth = hourWidth + colonWidth + minWidth + 4;
             var startX = centerX - (totalWidth / 2);
-            var posY = centerY + height * 0.5;
+            var posY = centerY + height * 0.25;
             // Hour
             dc.setColor(analogHoursColor, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(startX, posY, font, hourTxt, justify);
+            dc.drawText(startX, posY, timeSize, hourTxt, justify);
             // Separator
             dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
             startX += hourWidth + 2;
-            dc.drawText(startX, posY, font, colonTxt, justify);
+            dc.drawText(startX, posY, timeSize, colonTxt, justify);
             // Minutes
             startX += colonWidth + 2;
             dc.setColor(analogMinutesColor, Graphics.COLOR_TRANSPARENT);
-            dc.drawText(startX, posY, font, minTxt, justify);
+            dc.drawText(startX, posY, timeSize, minTxt, justify);
         }
     }
 
@@ -143,6 +169,7 @@ class ClockWidget {
             minutesColor = getSettingColor("MinColor");
             analogMinutesColor = getSettingColor("AnalogMinColor");
             secondsColor = getSettingColor("SecColor");
+            timeSize = getSetting("TimeSize");
             updateClockSettings = false;
         }
     }

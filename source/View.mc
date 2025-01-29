@@ -49,9 +49,6 @@ class View extends WatchUi.WatchFace {
         clockWidget.draw(dc);
         drawDate(dc);
         drawWidgets(dc);
-        if (showLines){
-            drawLines(dc);
-        }
     }
 
     function onPartialUpdate(dc as Dc) {
@@ -69,20 +66,6 @@ class View extends WatchUi.WatchFace {
             var widget = widgets[i];
             widget.update();
             widget.draw(dc);
-        }
-    }
-
-    private function drawLines(dc as Dc) as Void {
-        var minRadius = 35;
-        var maxRadius = (WidgetsRadius - 30);
-        for (var i = 0; i < numWidgets; i++) {
-            var angle = angleOffset + angleStep * i;
-            var startX = centerX + minRadius * Math.cos(angle);
-            var startY = centerY + minRadius * Math.sin(angle);
-            var endX = centerX + maxRadius * Math.cos(angle);
-            var endY = centerY + maxRadius * Math.sin(angle);
-            dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
-            dc.drawLine(startX, startY, endX, endY);
         }
     }
 
@@ -120,7 +103,6 @@ class View extends WatchUi.WatchFace {
     private function updateSettings() {
         if (updateViewSettings) {
             WidgetsRadius = getSetting("WidgetsRadius");
-            showLines = getSetting("DrawLines");
             drawableWidgets = getDrawableWidgets();
             numWidgets = drawableWidgets.size();
             if (numWidgets == 0) {
