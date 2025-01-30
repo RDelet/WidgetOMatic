@@ -58,11 +58,13 @@ class ClockWidget {
                 if (i < today.sec) {
                     dc.setColor(secondsColor, Graphics.COLOR_TRANSPARENT);
                 } else {
-                    dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+                    // dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+                    continue;
                 }
             } else {
                 if (i < today.sec) {
-                    dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+                    // dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+                    continue;
                 } else {
                     dc.setColor(secondsColor, Graphics.COLOR_TRANSPARENT);
                 }
@@ -83,11 +85,11 @@ class ClockWidget {
                 if (i < today.min) {
                     dc.setColor(minutesColor, Graphics.COLOR_TRANSPARENT);
                 } else {
-                    dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+                    continue;
                 }
             } else {
                 if (i < today.min) {
-                    dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+                    continue;
                 } else {
                     dc.setColor(minutesColor, Graphics.COLOR_TRANSPARENT);
                 }
@@ -97,19 +99,6 @@ class ClockWidget {
             startAngle -= angleStep;
         }
     }
-
-    /*
-    private function drawMinutes(dc as Dc) {
-        var angleStep = 360.0 / 60.0;
-        var startAngle = Math.toDegrees(Math.PI / 2.0) - angleStep * today.min;
-        var direction = Graphics.ARC_CLOCKWISE;
-        var endAngle = startAngle - (angleStep - 3);
-
-        dc.setPenWidth(penWidth / 2);
-        dc.setColor(minutesColor, Graphics.COLOR_TRANSPARENT);
-        dc.drawArc(centerX, centerY, minRadius + (radiusOffset * 0.25), direction, startAngle + 1, endAngle - 1);
-    }
-    */
 
     private function drawHours(dc as Dc) {
         var angleStep = 360.0 / 12.0;
