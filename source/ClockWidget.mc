@@ -6,8 +6,6 @@ using Toybox.WatchUi as Ui;
 
 class ClockWidget {
 
-    private var centerX;
-    private var centerY;
     private var maxRadius;
     private var minRadius;
     private var today;
@@ -17,85 +15,64 @@ class ClockWidget {
     private var minutesColor = Graphics.COLOR_WHITE;
     private var analogMinutesColor = Graphics.COLOR_WHITE;
     private var secondsColor = Graphics.COLOR_WHITE;
+    private var angleStep = Math.toRadians(360 / 60);
 
     function initialize() {}
 
     public function setPosition(x as Number, y as Number) {
-        centerX = x;
-        centerY = y;
         maxRadius = centerX - borderOffset;
         minRadius = maxRadius - radiusOffset;
         penWidth = maxRadius - minRadius;
     }
 
     private function drawMarkers(dc as Dc) {
-        dc.setPenWidth(2);
+        dc.setPenWidth(1);
         dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_TRANSPARENT);
         for (var i = 0; i < 60; i += 5) {
             var angle = (i / 60.0) * 2 * Math.PI;
             var startX = centerX + maxRadius * Math.cos(angle);
             var startY = centerY + maxRadius * Math.sin(angle);
-            var endX = centerX + (minRadius - 2) * Math.cos(angle);
-            var endY = centerY + (minRadius - 2) * Math.sin(angle);
+            var endX = centerX + (minRadius - 3) * Math.cos(angle);
+            var endY = centerY + (minRadius - 3) * Math.sin(angle);
             dc.drawLine(startX, startY, endX, endY);
         }
-
-        dc.setPenWidth(1);
-        dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawCircle(centerX, centerY, maxRadius);
-        dc.drawCircle(centerX, centerY, minRadius + (radiusOffset * 0.5));
-        dc.drawCircle(centerX, centerY, minRadius);
     }
 
     private function drawSeconds(dc as Dc) {
-        var angleStep = 360.0 / 60.0;
         var startAngle = Math.toDegrees(Math.PI / 2.0);
-        var direction = Graphics.ARC_CLOCKWISE;
-
+        var radius = minRadius + radiusOffset * 0.75;
         dc.setPenWidth(penWidth / 2);
+        dc.setColor(secondsColor, Graphics.COLOR_TRANSPARENT);
         for (var i = 0; i < 60; i++) {
-            if (today.min % 2 == 1) {
+            var pos = computeRadialPosition(i, angleStep, radius);
+            if (today.min % 2 == 0) {
                 if (i < today.sec) {
-                    dc.setColor(secondsColor, Graphics.COLOR_TRANSPARENT);
-                } else {
-                    // dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
-                    continue;
+                    dc.drawCircle(pos.x, pos.y, penWidth * 0.1);
                 }
             } else {
-                if (i < today.sec) {
-                    // dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
-                    continue;
-                } else {
-                    dc.setColor(secondsColor, Graphics.COLOR_TRANSPARENT);
+                if (i >= today.sec) {
+                    dc.drawCircle(pos.x, pos.y, penWidth * 0.1);
                 }
             }
-            var endAngle = startAngle - (angleStep - 3);
-            dc.drawArc(centerX, centerY, minRadius + (radiusOffset * 0.75), direction, startAngle, endAngle);
             startAngle -= angleStep;
         }
     }
-    private function drawMinutes(dc as Dc) {
-        var angleStep = 360.0 / 60.0;
-        var startAngle = Math.toDegrees(Math.PI / 2.0);
-        var direction = Graphics.ARC_CLOCKWISE;
 
+    private function drawMinutes(dc as Dc) {
+        var startAngle = Math.toDegrees(Math.PI / 2.0);
         dc.setPenWidth(penWidth / 2);
+        dc.setColor(minutesColor, Graphics.COLOR_TRANSPARENT);
         for (var i = 0; i < 60; i++) {
-            if (today.hour % 2 == 1) {
+            var pos = computeRadialPosition(i, angleStep, minRadius);
+            if (today.hour % 2 == 0) {
                 if (i < today.min) {
-                    dc.setColor(minutesColor, Graphics.COLOR_TRANSPARENT);
-                } else {
-                    continue;
+                    dc.drawCircle(pos.x, pos.y, penWidth * 0.1);
                 }
             } else {
-                if (i < today.min) {
-                    continue;
-                } else {
-                    dc.setColor(minutesColor, Graphics.COLOR_TRANSPARENT);
+                if (i >= today.min) {
+                    dc.drawCircle(pos.x, pos.y, penWidth * 0.1);
                 }
             }
-            var endAngle = startAngle - (angleStep - 3);
-            dc.drawArc(centerX, centerY, minRadius + (radiusOffset * 0.25), direction, startAngle, endAngle);
             startAngle -= angleStep;
         }
     }
@@ -143,10 +120,10 @@ class ClockWidget {
     public function draw(dc as Dc) {
         today = Gregorian.info(Time.now(), Time.FORMAT_LONG);
         updateSettings();
+        drawMarkers(dc);
         drawHours(dc);
         drawSeconds(dc);
         drawMinutes(dc);
-        drawMarkers(dc);
         drawAnalog(dc);
     }
 

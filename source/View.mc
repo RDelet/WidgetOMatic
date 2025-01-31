@@ -14,8 +14,6 @@ using Toybox.WatchUi as Ui;
 
 class View extends WatchUi.WatchFace {
 
-    private var centerX;
-    private var centerY;
     private var clockWidget;
     private var dateWidget;
     private var widgets as Array<Widget> = [];
@@ -69,19 +67,11 @@ class View extends WatchUi.WatchFace {
         }
     }
 
-    private function computeRadialPosition(step as Number) as Vector2{
-        var angle = angleOffset + angleStep * step;
-        var x = centerX + WidgetsRadius * Math.cos(angle);
-        var y = centerY + WidgetsRadius * Math.sin(angle);
-
-        return new Vector2(x, y);
-    }
-
     private function createWidgets(){
         widgets = [];
         for (var i = 0; i < drawableWidgets.size(); i++) {
             var widget = new Widget(drawableWidgets[i]); // ToDo: find solution to avoid warning
-            widget.setPosition(computeRadialPosition(i));
+            widget.setPosition(computeRadialPosition(i, angleStep, WidgetsRadius));
             widgets.add(widget);
         }
     }

@@ -72,6 +72,17 @@ public function toKiloMeters(value as Number) as Float {
     return value.toFloat() * 1e-5;
 }
 
+
+public function computeRadialPosition(step as Number, angleStep as Number, radius as Number) as Vector2{
+    var angle = angleOffset + angleStep * step;
+    var x = centerX + radius * Math.cos(angle);
+    var y = centerY + radius * Math.sin(angle);
+
+    return new Vector2(x, y);
+}
+
+public var centerX = 0;
+public var centerY = 0;
 public var borderOffset = 2;
 public var radiusOffset = 12;
 public var angleOffset = Math.toRadians(-90);
